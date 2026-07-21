@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html lang="el">
-<head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4LPPJD4P8B"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-4LPPJD4P8B');
-</script>
+<head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LPPJD4P8B"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-4LPPJD4P8B');
+  </script>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Δημήτρης Δρένης — Μαθηματικά, Μαθηματική Φυσική και εκπαιδευτικές σημειώσεις.">
-  <title>Δημήτρης Δρένης | Μαθηματικά & Μαθηματική Φυσική</title>
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Δημήτρης Δρένης — Μαθηματικά, Μαθηματική Φυσική και εκπαιδευτικές σημειώσεις."
+  >
+
+  <title>
+    Δημήτρης Δρένης | Μαθηματικά & Μαθηματική Φυσική
+  </title>
+
 
   <style>
+
     :root {
       --navy: #03172a;
       --navy-2: #071f36;
@@ -27,15 +47,18 @@
       --page: #f5f7fa;
     }
 
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
+
 
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -44,323 +67,551 @@
       line-height: 1.65;
     }
 
+
     a {
       color: inherit;
     }
 
-    /* Επάνω μενού */
+
+    /* =====================================================
+       ΕΠΑΝΩ ΜΕΝΟΥ
+    ===================================================== */
+
     .topbar {
       position: sticky;
       top: 0;
       z-index: 1000;
+
       min-height: 76px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       gap: 28px;
+
       padding: 0 3.5%;
+
       background: rgba(3, 23, 42, 0.97);
-      border-bottom: 1px solid rgba(255,255,255,0.12);
+
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
       color: white;
+
       backdrop-filter: blur(10px);
     }
 
+
     .site-name {
       font-family: Georgia, "Times New Roman", serif;
+
       font-size: 1.25rem;
       font-weight: 700;
+
       text-decoration: none;
+
       white-space: nowrap;
     }
+
 
     .menu {
       display: flex;
       align-items: center;
       justify-content: flex-end;
+
       gap: 34px;
+
       list-style: none;
     }
 
+
     .menu a {
       position: relative;
+
       display: inline-block;
+
       padding: 27px 0 23px;
-      color: #fff;
+
+      color: #ffffff;
+
       text-decoration: none;
+
       font-weight: 700;
       font-size: 0.92rem;
+
       letter-spacing: 0.3px;
     }
 
+
     .menu a::after {
       content: "";
+
       position: absolute;
+
       left: 0;
       right: 0;
       bottom: 14px;
+
       height: 2px;
+
       background: var(--gold);
+
       transform: scaleX(0);
+
       transition: transform 0.25s ease;
     }
+
 
     .menu a:hover::after,
     .menu a.active::after {
       transform: scaleX(1);
     }
 
-    /* Η κεντρική εικόνα */
+
+    /* =====================================================
+       ΚΕΝΤΡΙΚΗ ΕΙΚΟΝΑ
+    ===================================================== */
+
     .hero {
       width: 100%;
+
       background: var(--navy);
+
       padding: 22px;
     }
 
+
     .hero-image {
       display: block;
+
       width: 100%;
       height: auto;
+
       max-height: calc(100vh - 98px);
+
       object-fit: contain;
       object-position: center;
+
       border: 1px solid rgba(231, 180, 106, 0.35);
-      box-shadow: 0 18px 50px rgba(0,0,0,0.32);
+
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.32);
     }
 
-    /* Κύριο περιεχόμενο */
+
+    /* =====================================================
+       ΚΥΡΙΟ ΠΕΡΙΕΧΟΜΕΝΟ
+    ===================================================== */
+
     .container {
       width: min(1120px, 92%);
+
       margin: 0 auto;
     }
+
 
     section {
       scroll-margin-top: 95px;
     }
 
+
     .intro {
       padding: 72px 0 32px;
+
       text-align: center;
     }
 
+
     .eyebrow {
       margin-bottom: 10px;
+
       color: #a56f2c;
+
       font-weight: 700;
+
       letter-spacing: 2px;
+
       text-transform: uppercase;
+
       font-size: 0.8rem;
     }
 
+
     h2 {
       margin-bottom: 18px;
+
       color: var(--navy);
+
       font-family: Georgia, "Times New Roman", serif;
+
       font-size: clamp(2rem, 4vw, 3rem);
+
       line-height: 1.15;
     }
 
+
     .intro p {
       max-width: 760px;
+
       margin: 0 auto;
+
       color: var(--muted);
+
       font-size: 1.08rem;
     }
+
+
+    /* =====================================================
+       ΣΗΜΕΙΩΣΕΙΣ
+    ===================================================== */
 
     .notes-section {
       padding: 40px 0 78px;
     }
 
+
     .notes-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+      );
+
       gap: 24px;
+
       margin-top: 34px;
     }
+
 
     .note-card {
       display: flex;
       flex-direction: column;
+
       min-height: 270px;
+
       padding: 30px;
+
       background: white;
+
       border: 1px solid var(--line);
       border-radius: 14px;
+
       box-shadow: 0 10px 30px rgba(20, 45, 70, 0.08);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
     }
+
 
     .note-card:hover {
       transform: translateY(-6px);
+
       box-shadow: 0 18px 38px rgba(20, 45, 70, 0.14);
     }
 
+
     .note-number {
       margin-bottom: 20px;
+
       color: var(--gold);
+
       font-family: Georgia, "Times New Roman", serif;
+
       font-size: 2.2rem;
       font-weight: 700;
     }
 
+
     .note-card h3 {
       margin-bottom: 12px;
+
       color: var(--navy);
+
       font-family: Georgia, "Times New Roman", serif;
+
       font-size: 1.45rem;
     }
 
+
     .note-card p {
       margin-bottom: 24px;
+
       color: var(--muted);
     }
 
+
     .pdf-button {
       display: inline-block;
+
       align-self: flex-start;
+
       margin-top: auto;
+
       padding: 12px 20px;
+
       background: var(--navy);
+
       border: 1px solid var(--navy);
       border-radius: 7px;
+
       color: white;
+
       text-decoration: none;
+
       font-weight: 700;
-      transition: background 0.25s ease, color 0.25s ease;
+
+      transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
     }
+
 
     .pdf-button:hover {
       background: var(--gold);
+
       border-color: var(--gold);
+
       color: var(--navy);
     }
+
+
+    /* =====================================================
+       ΥΠΟΕΝΟΤΗΤΑ ΤΟΥ ΛΟΓΙΣΜΟΥ 4
+    ===================================================== */
+
+    .note-subsection {
+      margin-top: 26px;
+
+      padding-top: 22px;
+
+      border-top: 1px solid var(--line);
+    }
+
+
+    .note-subsection h4 {
+      margin-bottom: 14px;
+
+      color: var(--navy);
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 1.12rem;
+
+      line-height: 1.4;
+    }
+
+
+    .note-subsection .pdf-button {
+      margin-top: 0;
+    }
+
+
+    /* =====================================================
+       ΣΧΕΤΙΚΑ ΜΕ ΕΜΕΝΑ ΚΑΙ ΕΠΙΚΟΙΝΩΝΙΑ
+    ===================================================== */
 
     .about,
     .contact {
       padding: 72px 0;
     }
 
+
     .about {
       background: #ffffff;
+
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
 
+
     .about-layout {
       display: grid;
+
       grid-template-columns: 1fr 1.5fr;
+
       gap: 52px;
+
       align-items: start;
     }
+
 
     .about p,
     .contact p {
       color: var(--muted);
+
       margin-bottom: 16px;
     }
+
 
     .contact {
       text-align: center;
     }
 
+
     .contact-link {
       display: inline-block;
+
       margin-top: 14px;
+
       padding: 13px 22px;
+
       border: 1px solid var(--navy);
       border-radius: 7px;
+
       color: var(--navy);
+
       text-decoration: none;
+
       font-weight: 700;
     }
 
+
     .contact-link:hover {
       background: var(--navy);
+
       color: white;
     }
+
+
+    /* =====================================================
+       ΥΠΟΣΕΛΙΔΟ
+    ===================================================== */
 
     footer {
       padding: 28px 20px;
+
       background: var(--navy);
+
       color: #cbd6df;
+
       text-align: center;
+
       font-size: 0.92rem;
     }
 
+
+    /* =====================================================
+       ΚΟΥΜΠΙ ΜΕΝΟΥ ΓΙΑ ΚΙΝΗΤΑ
+    ===================================================== */
+
     .menu-toggle {
       display: none;
-      border: 1px solid rgba(255,255,255,0.35);
+
+      border: 1px solid rgba(255, 255, 255, 0.35);
       border-radius: 6px;
+
       background: transparent;
+
       color: white;
+
       padding: 8px 11px;
+
       font-size: 1.2rem;
+
       cursor: pointer;
     }
 
+
+    /* =====================================================
+       TABLET ΚΑΙ ΜΙΚΡΕΣ ΟΘΟΝΕΣ
+    ===================================================== */
+
     @media (max-width: 900px) {
+
       .menu-toggle {
         display: block;
       }
 
+
       .menu {
         position: absolute;
+
         top: 76px;
         left: 0;
         right: 0;
+
         display: none;
+
         flex-direction: column;
+
         gap: 0;
+
         align-items: stretch;
+
         padding: 8px 4%;
+
         background: var(--navy);
-        border-top: 1px solid rgba(255,255,255,0.1);
+
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
       }
+
 
       .menu.open {
         display: flex;
       }
 
+
       .menu a {
         display: block;
+
         padding: 14px 0;
       }
+
 
       .menu a::after {
         bottom: 7px;
       }
 
+
       .hero {
         padding: 10px;
       }
 
+
       .about-layout {
         grid-template-columns: 1fr;
+
         gap: 22px;
       }
+
     }
 
+
+    /* =====================================================
+       ΚΙΝΗΤΑ
+    ===================================================== */
+
     @media (max-width: 560px) {
+
       .topbar {
         min-height: 66px;
+
         padding: 0 18px;
       }
+
 
       .site-name {
         font-size: 1.05rem;
       }
 
+
       .menu {
         top: 66px;
       }
+
 
       .hero {
         padding: 0;
       }
 
+
       .hero-image {
         border-left: 0;
         border-right: 0;
       }
+
 
       .intro,
       .about,
@@ -368,129 +619,344 @@
         padding-top: 54px;
         padding-bottom: 54px;
       }
+
+
+      .note-card {
+        padding: 24px;
+      }
+
     }
+
   </style>
+
 </head>
 
-<body>
-  <nav class="topbar">
-    <a class="site-name" href="#home">Δημήτρης Δρένης</a>
 
-    <button class="menu-toggle" type="button" aria-label="Άνοιγμα μενού" onclick="toggleMenu()">
+<body>
+
+
+  <!-- =====================================================
+       ΕΠΑΝΩ ΜΕΝΟΥ
+  ====================================================== -->
+
+  <nav class="topbar">
+
+    <a class="site-name" href="#home">
+      Δημήτρης Δρένης
+    </a>
+
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Άνοιγμα μενού"
+      onclick="toggleMenu()"
+    >
       ☰
     </button>
 
+
     <ul class="menu" id="mainMenu">
-      <li><a class="active" href="#home">ΑΡΧΙΚΗ</a></li>
-      <li><a href="#notes">ΣΗΜΕΙΩΣΕΙΣ</a></li>
-      <li><a href="#courses">ΜΑΘΗΜΑΤΑ</a></li>
-      <li><a href="#about">ΣΧΕΤΙΚΑ ΜΕ ΕΜΕΝΑ</a></li>
-      <li><a href="#contact">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
+
+      <li>
+        <a class="active" href="#home">
+          ΑΡΧΙΚΗ
+        </a>
+      </li>
+
+      <li>
+        <a href="#notes">
+          ΣΗΜΕΙΩΣΕΙΣ
+        </a>
+      </li>
+
+      <li>
+        <a href="#courses">
+          ΜΑΘΗΜΑΤΑ
+        </a>
+      </li>
+
+      <li>
+        <a href="#about">
+          ΣΧΕΤΙΚΑ ΜΕ ΕΜΕΝΑ
+        </a>
+      </li>
+
+      <li>
+        <a href="#contact">
+          ΕΠΙΚΟΙΝΩΝΙΑ
+        </a>
+      </li>
+
     </ul>
+
   </nav>
 
+
+  <!-- =====================================================
+       ΚΕΝΤΡΙΚΗ ΕΙΚΟΝΑ
+  ====================================================== -->
+
   <header class="hero" id="home">
+
     <img
       class="hero-image"
       src="images/hero-math.png"
       alt="Δημήτρης Δρένης — Μαθηματικά και Μαθηματική Φυσική"
     >
+
   </header>
 
+
   <main>
+
+
+    <!-- =====================================================
+         ΕΙΣΑΓΩΓΗ
+    ====================================================== -->
+
     <section class="intro" id="courses">
+
       <div class="container">
-        <div class="eyebrow">Καλώς ήρθατε</div>
-        <h2>Μαθηματικά και Μαθηματική Φυσική</h2>
+
+        <div class="eyebrow">
+          Καλώς ήρθατε
+        </div>
+
+
+        <h2>
+          Μαθηματικά και Μαθηματική Φυσική
+        </h2>
+
+
         <p>
-          Στην ιστοσελίδα θα βρείτε οργανωμένες σημειώσεις, μεθοδολογίες,
-          παρατηρήσεις και εκπαιδευτικό υλικό για πανεπιστημιακά μαθηματικά
-          και μαθηματική φυσική.
+          Στην ιστοσελίδα θα βρείτε οργανωμένες σημειώσεις,
+          μεθοδολογίες, παρατηρήσεις και εκπαιδευτικό υλικό
+          για πανεπιστημιακά μαθηματικά και μαθηματική φυσική.
         </p>
+
       </div>
+
     </section>
 
+
+    <!-- =====================================================
+         ΣΗΜΕΙΩΣΕΙΣ
+    ====================================================== -->
+
     <section class="notes-section" id="notes">
+
       <div class="container">
-        <div class="eyebrow">Εκπαιδευτικό υλικό</div>
-        <h2>Σημειώσεις</h2>
+
+        <div class="eyebrow">
+          Εκπαιδευτικό υλικό
+        </div>
+
+
+        <h2>
+          Σημειώσεις
+        </h2>
+
 
         <div class="notes-grid">
+
+
+          <!-- ΚΑΡΤΑ ΛΟΓΙΣΜΟΥ 4 -->
+
           <article class="note-card">
-            <div class="note-number">01</div>
-            <h3>Λογισμός 4</h3>
+
+            <div class="note-number">
+              01
+            </div>
+
+
+            <h3>
+              Λογισμός 4
+            </h3>
+
+
             <p>
               Διπλά και τριπλά ολοκληρώματα, αλλαγές μεταβλητών,
-              επικαμπύλια και επιφανειακά ολοκληρώματα, καθώς και τα
-              θεωρήματα Green, Gauss και Stokes.
+              επικαμπύλια και επιφανειακά ολοκληρώματα, καθώς και
+              τα θεωρήματα Green, Gauss και Stokes.
             </p>
+
+
             <a
               class="pdf-button"
               href="pdf/calculus4_notes.pdf"
               target="_blank"
               rel="noopener"
             >
-              Προβολή PDF
+              Προβολή σημειώσεων Λογισμού 4
             </a>
+
+
+            <!-- ΜΟΝΑΔΙΚΗ ΥΠΟΕΝΟΤΗΤΑ -->
+
+            <div class="note-subsection">
+
+              <h4>
+                Διπλά Ολοκληρώματα – Μεθοδολογία Part 1
+              </h4>
+
+
+              <a
+                class="pdf-button"
+                href="pdf/double_integrals_methodology_part1.pdf"
+                target="_blank"
+                rel="noopener"
+              >
+                Προβολή PDF
+              </a>
+
+            </div>
+
           </article>
 
-         
+
         </div>
+
       </div>
+
     </section>
+
+
+    <!-- =====================================================
+         ΣΧΕΤΙΚΑ ΜΕ ΕΜΕΝΑ
+    ====================================================== -->
 
     <section class="about" id="about">
+
       <div class="container about-layout">
-        <div>
-          <div class="eyebrow">Προφίλ</div>
-          <h2>Σχετικά με εμένα</h2>
-        </div>
+
 
         <div>
+
+          <div class="eyebrow">
+            Προφίλ
+          </div>
+
+
+          <h2>
+            Σχετικά με εμένα
+          </h2>
+
+        </div>
+
+
+        <div>
+
           <p>
-            Είμαι καθηγητής μαθηματικών με ειδίκευση στα Θεωρητικά Μαθηματικά και ασχολούμαι με τη διδασκαλία και
-            τη μελέτη των μαθηματικών. Ιδιαίτερο ενδιαφέρον έχω για την
-            ανάλυση, τις διαφορικές και μερικές διαφορικές εξισώσεις, τη διαφορική γεωμετρία και
+            Είμαι καθηγητής μαθηματικών με ειδίκευση στα
+            Θεωρητικά Μαθηματικά και ασχολούμαι με τη διδασκαλία
+            και τη μελέτη των μαθηματικών. Ιδιαίτερο ενδιαφέρον
+            έχω για την ανάλυση, τις διαφορικές και μερικές
+            διαφορικές εξισώσεις, τη διαφορική γεωμετρία και
             τη μαθηματική φυσική.
           </p>
+
+
           <p>
-            Στόχος της ιστοσελίδας είναι η δημοσίευση κατανοητών και
-            οργανωμένων σημειώσεων που εξηγούν όχι μόνο τους τύπους, αλλά
-            και τη μεθοδολογία και τη βαθύτερη μαθηματική ιδέα πίσω από αυτούς.
+            Στόχος της ιστοσελίδας είναι η δημοσίευση κατανοητών
+            και οργανωμένων σημειώσεων που εξηγούν όχι μόνο τους
+            τύπους, αλλά και τη μεθοδολογία και τη βαθύτερη
+            μαθηματική ιδέα πίσω από αυτούς.
           </p>
+
         </div>
+
       </div>
+
     </section>
 
+
+    <!-- =====================================================
+         ΕΠΙΚΟΙΝΩΝΙΑ
+    ====================================================== -->
+
     <section class="contact" id="contact">
+
       <div class="container">
-        <div class="eyebrow">Επικοινωνία</div>
-        <h2>Επικοινωνήστε μαζί μου</h2>
+
+        <div class="eyebrow">
+          Επικοινωνία
+        </div>
+
+
+        <h2>
+          Επικοινωνήστε μαζί μου
+        </h2>
+
+
         <p>
           jimdre9395@gmail.com
         </p>
-        <a class="contact-link" href="https://www.instagram.com/" target="_blank" rel="noopener">
+
+
+        <a
+          class="contact-link"
+          href="https://www.instagram.com/dimitrisdrenis/"
+          target="_blank"
+          rel="noopener"
+        >
           Instagram
-          <href="https://www.instagram.com/dimitrisdrenis/"
         </a>
+
       </div>
+
     </section>
+
+
   </main>
 
+
+  <!-- =====================================================
+       ΥΠΟΣΕΛΙΔΟ
+  ====================================================== -->
+
   <footer>
-    © 2026 Δημήτρης Δρένης — Μαθηματικά & Μαθηματική Φυσική
+
+    © 2026 Δημήτρης Δρένης —
+    Μαθηματικά & Μαθηματική Φυσική
+
   </footer>
 
+
+  <!-- =====================================================
+       JAVASCRIPT ΓΙΑ ΤΟ ΜΕΝΟΥ
+  ====================================================== -->
+
   <script>
+
     function toggleMenu() {
-      document.getElementById("mainMenu").classList.toggle("open");
+
+      document
+        .getElementById("mainMenu")
+        .classList
+        .toggle("open");
+
     }
 
-    document.querySelectorAll("#mainMenu a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        document.getElementById("mainMenu").classList.remove("open");
+
+    document
+      .querySelectorAll("#mainMenu a")
+      .forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+          document
+            .getElementById("mainMenu")
+            .classList
+            .remove("open");
+
+        });
+
       });
-    });
+
   </script>
+
+
 </body>
+
 </html>
